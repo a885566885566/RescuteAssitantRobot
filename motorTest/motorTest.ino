@@ -84,7 +84,7 @@ void script3(){
     beep(100);
     moveHead(90);
     delay(1500);
-    turnLeft();
+    turnRight();
     travel(POWER, 1000);
     for(int i=0;i<10;i++){
         beep(100);
