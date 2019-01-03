@@ -13,7 +13,8 @@
 
 #define POWER 200
 #define TURN_POWER 100
-#define TURN_TIME 320
+#define TURN_LEFT_TIME 320
+#define TURN_RIGHT_TIME 320
 Servo headServo;
 SoftwareSerial bt(10,11);  //re tx
 
@@ -121,13 +122,13 @@ void headTurnRight(){
 }
 void turnLeft(){
     move(TURN_POWER, -1*TURN_POWER);
-    delay(TURN_TIME);
+    delay(TURN_LEFT_TIME);
     stopMotor();
     delay(500);
 }
 void turnRight(){
     move(-1*TURN_POWER, TURN_POWER);
-    delay(TURN_TIME);
+    delay(TURN_RIGHT_TIME);
     stopMotor();
     delay(500);
 }
